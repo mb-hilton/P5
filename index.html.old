@@ -1,0 +1,834 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>5 Bedroom Penthouse · DoubleTree by Hilton · Ocean City, MD</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta
+    name="description"
+    content="Tour the 5 bedroom penthouse at the DoubleTree by Hilton in Ocean City, MD – oceanfront luxury with panoramic views."
+  />
+  <style>
+    :root {
+      --bg: #f5f8fb;
+      --primary: #007a9b;
+      --accent: #ff8a5c;
+      --text: #1f2933;
+      --muted: #6b7b8c;
+      --card: #ffffff;
+      --border: #dde5ee;
+      --radius-lg: 18px;
+      --radius-md: 12px;
+      --shadow-soft: 0 18px 40px rgba(15, 23, 42, 0.12);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+        sans-serif;
+      background: radial-gradient(circle at top left, #e0f4ff, #f5f8fb 55%);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .page {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 32px 20px 64px;
+    }
+
+    header {
+      display: grid;
+      grid-template-columns: minmax(0, 1.1fr) minmax(0, 1.1fr);
+      gap: 32px;
+      align-items: center;
+      margin-bottom: 40px;
+    }
+
+    @media (max-width: 900px) {
+      header {
+        grid-template-columns: minmax(0, 1fr);
+      }
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 4px 10px;
+      border-radius: 999px;
+      background: rgba(0, 122, 155, 0.08);
+      color: var(--primary);
+      font-size: 12px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 12px;
+    }
+
+    .badge-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 999px;
+      background: var(--accent);
+    }
+
+    h1 {
+      font-size: clamp(32px, 4vw, 40px);
+      line-height: 1.1;
+      margin-bottom: 10px;
+    }
+
+    .subtitle {
+      font-size: 15px;
+      color: var(--muted);
+      margin-bottom: 18px;
+    }
+
+    .address {
+      font-size: 14px;
+      color: var(--muted);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 24px;
+    }
+
+    .address-icon {
+      width: 18px;
+      height: 18px;
+      border-radius: 999px;
+      background: rgba(0, 122, 155, 0.08);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 11px;
+      color: var(--primary);
+    }
+
+    .hero-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 24px;
+    }
+
+    .meta-pill {
+      padding: 6px 12px;
+      border-radius: 999px;
+      border: 1px solid rgba(148, 163, 184, 0.5);
+      font-size: 13px;
+      background: rgba(255, 255, 255, 0.7);
+      backdrop-filter: blur(8px);
+    }
+
+    .cta-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      align-items: center;
+    }
+
+    .btn-primary {
+      padding: 10px 18px;
+      border-radius: 999px;
+      border: none;
+      background: linear-gradient(135deg, var(--primary), #00a4c7);
+      color: #fff;
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+      box-shadow: 0 12px 30px rgba(0, 122, 155, 0.35);
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .btn-primary span {
+      font-size: 18px;
+    }
+
+    .btn-ghost {
+      padding: 9px 16px;
+      border-radius: 999px;
+      border: 1px solid rgba(148, 163, 184, 0.6);
+      background: rgba(255, 255, 255, 0.7);
+      font-size: 13px;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--text);
+    }
+
+    .hero-note {
+      font-size: 12px;
+      color: var(--muted);
+      margin-top: 6px;
+    }
+
+    .hero-media {
+      position: relative;
+    }
+
+    .hero-main {
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: var(--shadow-soft);
+      border: 1px solid rgba(148, 163, 184, 0.35);
+    }
+
+    .hero-main img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+
+    .hero-strip {
+      position: absolute;
+      inset: auto 0 -18px;
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      pointer-events: none;
+    }
+
+    .hero-thumb {
+      width: 80px;
+      height: 60px;
+      border-radius: 12px;
+      overflow: hidden;
+      border: 2px solid #fff;
+      box-shadow: 0 10px 25px rgba(15, 23, 42, 0.25);
+      background: #000;
+    }
+
+    .hero-thumb img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    main {
+      margin-top: 56px;
+      display: grid;
+      grid-template-columns: minmax(0, 1.6fr) minmax(0, 1.1fr);
+      gap: 32px;
+    }
+
+    @media (max-width: 1000px) {
+      main {
+        grid-template-columns: minmax(0, 1fr);
+      }
+    }
+
+    section {
+      margin-bottom: 32px;
+    }
+
+    h2 {
+      font-size: 20px;
+      margin-bottom: 12px;
+    }
+
+    .section-subtitle {
+      font-size: 13px;
+      color: var(--muted);
+      margin-bottom: 16px;
+    }
+
+    .highlights-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      gap: 14px;
+    }
+
+    .highlight-card {
+      background: rgba(255, 255, 255, 0.9);
+      border-radius: var(--radius-md);
+      padding: 12px 12px 11px;
+      border: 1px solid var(--border);
+    }
+
+    .highlight-label {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--muted);
+      margin-bottom: 4px;
+    }
+
+    .highlight-value {
+      font-size: 15px;
+      font-weight: 600;
+    }
+
+    .highlight-note {
+      font-size: 12px;
+      color: var(--muted);
+      margin-top: 4px;
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 10px;
+    }
+
+    @media (max-width: 800px) {
+      .gallery-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 520px) {
+      .gallery-grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+    }
+
+    .gallery-item {
+      border-radius: 14px;
+      overflow: hidden;
+      border: 1px solid rgba(148, 163, 184, 0.4);
+      background: #000;
+      position: relative;
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.35s ease;
+    }
+
+    .gallery-item:hover img {
+      transform: scale(1.04);
+    }
+
+    .gallery-tag {
+      position: absolute;
+      left: 10px;
+      bottom: 10px;
+      padding: 4px 9px;
+      border-radius: 999px;
+      background: rgba(15, 23, 42, 0.7);
+      color: #e5e7eb;
+      font-size: 11px;
+      backdrop-filter: blur(6px);
+    }
+
+    .floorplan-card {
+      border-radius: var(--radius-md);
+      background: rgba(255, 255, 255, 0.9);
+      border: 1px dashed rgba(148, 163, 184, 0.8);
+      padding: 14px;
+      display: grid;
+      grid-template-columns: minmax(0, 1.1fr) minmax(0, 1.2fr);
+      gap: 14px;
+      align-items: center;
+    }
+
+    @media (max-width: 700px) {
+      .floorplan-card {
+        grid-template-columns: minmax(0, 1fr);
+      }
+    }
+
+    .floorplan-img {
+      border-radius: 12px;
+      overflow: hidden;
+      border: 1px solid rgba(148, 163, 184, 0.5);
+      background: #000;
+    }
+
+    .floorplan-text {
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    .floorplan-text strong {
+      color: var(--text);
+    }
+
+    .amenities-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 10px;
+      font-size: 13px;
+    }
+
+    .amenities-list ul {
+      list-style: none;
+    }
+
+    .amenities-list li {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      margin-bottom: 6px;
+      color: var(--muted);
+    }
+
+    .amenities-bullet {
+      width: 6px;
+      height: 6px;
+      border-radius: 999px;
+      background: var(--primary);
+      flex-shrink: 0;
+    }
+
+    .side-card {
+      background: rgba(255, 255, 255, 0.95);
+      border-radius: var(--radius-lg);
+      padding: 18px 18px 16px;
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow-soft);
+    }
+
+    .side-card + .side-card {
+      margin-top: 18px;
+    }
+
+    .side-label {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--muted);
+      margin-bottom: 4px;
+    }
+
+    .side-value {
+      font-size: 16px;
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+
+    .side-note {
+      font-size: 12px;
+      color: var(--muted);
+      margin-bottom: 10px;
+    }
+
+    .side-row {
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+      font-size: 13px;
+      margin-top: 8px;
+    }
+
+    .side-row span:last-child {
+      color: var(--muted);
+    }
+
+    .contact-chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 7px 11px;
+      border-radius: 999px;
+      background: rgba(0, 122, 155, 0.06);
+      font-size: 12px;
+      color: var(--primary);
+      margin-top: 6px;
+    }
+
+    footer {
+      margin-top: 40px;
+      font-size: 11px;
+      color: var(--muted);
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header>
+      <div>
+        <div class="badge">
+          <span class="badge-dot"></span>
+          Oceanfront Penthouse · DoubleTree by Hilton
+        </div>
+        <h1>5 Bedroom Penthouse in Ocean City, MD</h1>
+        <p class="subtitle">
+          A full‑floor, oceanfront retreat with panoramic views, multiple living
+          spaces, and resort‑style outdoor terraces.
+        </p>
+        <div class="address">
+          <span class="address-icon">📍</span>
+          <span>
+            3301 Atlantic Ave · Ocean City, MD 21842<br />
+            DoubleTree by Hilton Ocean City Oceanfront
+          </span>
+        </div>
+
+        <div class="hero-meta">
+          <div class="meta-pill">5 Bedrooms · Sleeps 12+</div>
+          <div class="meta-pill">Oceanfront Balcony & Rooftop Terrace</div>
+          <div class="meta-pill">Gourmet Kitchen · Multiple Lounges</div>
+          <div class="meta-pill">Direct Beach & Boardwalk Access</div>
+        </div>
+
+        <div class="cta-row">
+          <button class="btn-primary">
+            <span>●</span>
+            Schedule a private tour
+          </button>
+          <button class="btn-ghost">
+            View full photo gallery
+          </button>
+        </div>
+        <p class="hero-note">
+          All photos shown are of the actual 5 bedroom penthouse at the
+          DoubleTree by Hilton in Ocean City, MD.
+        </p>
+      </div>
+
+      <div class="hero-media">
+        <!-- HERO MAIN IMAGE – replace src with your best wide living/bedroom shot -->
+        <div class="hero-main">
+          <img
+            src="images/penthouse-living-main.jpg"
+            alt="Spacious coastal living room with ocean views"
+          />
+        </div>
+
+        <!-- SMALL STRIP OF THUMBNAILS – replace with key highlight images -->
+        <div class="hero-strip">
+          <div class="hero-thumb">
+            <img
+              src="images/penthouse-bedroom-master.jpg"
+              alt="Primary bedroom with balcony access"
+            />
+          </div>
+          <div class="hero-thumb">
+            <img
+              src="images/penthouse-kitchen.jpg"
+              alt="Curved gourmet kitchen with modern appliances"
+            />
+          </div>
+          <div class="hero-thumb">
+            <img
+              src="images/penthouse-terrace.jpg"
+              alt="Rooftop terrace with lounge seating and ocean views"
+            />
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <div>
+        <!-- HIGHLIGHTS -->
+        <section>
+          <h2>Highlights at a glance</h2>
+          <p class="section-subtitle">
+            Designed for large families, groups, and multi‑generation stays—with
+            hotel services and private‑home comfort.
+          </p>
+          <div class="highlights-grid">
+            <div class="highlight-card">
+              <div class="highlight-label">Bedrooms</div>
+              <div class="highlight-value">5 private bedrooms</div>
+              <div class="highlight-note">
+                Includes bunk room and multiple king suites.
+              </div>
+            </div>
+            <div class="highlight-card">
+              <div class="highlight-label">Bathrooms</div>
+              <div class="highlight-value">Spa‑style baths</div>
+              <div class="highlight-note">
+                Walk‑in showers, soaking tubs, and double vanities.
+              </div>
+            </div>
+            <div class="highlight-card">
+              <div class="highlight-label">Living spaces</div>
+              <div class="highlight-value">Multiple lounges</div>
+              <div class="highlight-note">
+                Oceanfront living room, media areas, and dining for a crowd.
+              </div>
+            </div>
+            <div class="highlight-card">
+              <div class="highlight-label">Outdoor</div>
+              <div class="highlight-value">Balcony & rooftop</div>
+              <div class="highlight-note">
+                Expansive balcony plus furnished rooftop terrace.
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- GALLERY -->
+        <section>
+          <h2>Photo gallery</h2>
+          <p class="section-subtitle">
+            Explore every corner of the penthouse—from the coastal bedrooms and
+            spa bathrooms to the chef’s kitchen and outdoor spaces.
+          </p>
+
+          <div class="gallery-grid">
+            <!-- Replace each src with your actual image paths -->
+            <div class="gallery-item">
+              <img
+                src="images/penthouse-living-1.jpg"
+                alt="Oceanfront living room with sectional sofa and TV"
+              />
+              <div class="gallery-tag">Main living room</div>
+            </div>
+            <div class="gallery-item">
+              <img
+                src="images/penthouse-living-2.jpg"
+                alt="Secondary seating area with armchairs and balcony access"
+              />
+              <div class="gallery-tag">Coastal lounge</div>
+            </div>
+            <div class="gallery-item">
+              <img
+                src="images/penthouse-dining.jpg"
+                alt="Large dining table with ocean views"
+              />
+              <div class="gallery-tag">Dining area</div>
+            </div>
+            <div class="gallery-item">
+              <img
+                src="images/penthouse-kitchen-curve.jpg"
+                alt="Curved kitchen with stainless appliances"
+              />
+              <div class="gallery-tag">Gourmet kitchen</div>
+            </div>
+            <div class="gallery-item">
+              <img
+                src="images/penthouse-bedroom-king.jpg"
+                alt="King bedroom with coastal decor"
+              />
+              <div class="gallery-tag">King suite</div>
+            </div>
+            <div class="gallery-item">
+              <img
+                src="images/penthouse-bedroom-double.jpg"
+                alt="Double queen bedroom with balcony"
+              />
+              <div class="gallery-tag">Guest bedroom</div>
+            </div>
+            <div class="gallery-item">
+              <img
+                src="images/penthouse-bunkroom.jpg"
+                alt="Bunk room with two sets of bunk beds"
+              />
+              <div class="gallery-tag">Bunk room</div>
+            </div>
+            <div class="gallery-item">
+              <img
+                src="images/penthouse-bathroom-1.jpg"
+                alt="Bathroom with double vanity and hexagon mirrors"
+              />
+              <div class="gallery-tag">Double vanity bath</div>
+            </div>
+            <div class="gallery-item">
+              <img
+                src="images/penthouse-bathroom-2.jpg"
+                alt="Walk-in shower with teal tile and grab bar"
+              />
+              <div class="gallery-tag">Walk‑in shower</div>
+            </div>
+            <div class="gallery-item">
+              <img
+                src="images/penthouse-balcony.jpg"
+                alt="Long balcony overlooking the beach and ocean"
+              />
+              <div class="gallery-tag">Oceanfront balcony</div>
+            </div>
+            <div class="gallery-item">
+              <img
+                src="images/penthouse-rooftop.jpg"
+                alt="Rooftop terrace with dining table and loungers"
+              />
+              <div class="gallery-tag">Rooftop terrace</div>
+            </div>
+            <div class="gallery-item">
+              <img
+                src="images/penthouse-floorplan.jpg"
+                alt="Architectural floor plan of the penthouse"
+              />
+              <div class="gallery-tag">Floor plan</div>
+            </div>
+          </div>
+        </section>
+
+        <!-- FLOORPLAN -->
+        <section>
+          <h2>Floor plan & layout</h2>
+          <p class="section-subtitle">
+            A full‑floor layout designed for privacy, flow, and effortless
+            gathering—anchored by a central living and dining core.
+          </p>
+
+          <div class="floorplan-card">
+            <div class="floorplan-img">
+              <img
+                src="images/penthouse-floorplan-large.jpg"
+                alt="Detailed floor plan of the 5 bedroom penthouse"
+              />
+            </div>
+            <div class="floorplan-text">
+              <p>
+                <strong>Thoughtful zoning:</strong> Bedrooms are positioned along
+                the perimeter for privacy, while the central spine of the
+                penthouse is dedicated to shared living, dining, and kitchen
+                spaces.
+              </p>
+              <p>
+                <strong>Multiple bedroom types:</strong> King suites, guest
+                rooms, and a dedicated bunk room make it easy to host families,
+                kids, and friends comfortably.
+              </p>
+              <p>
+                <strong>Indoor‑outdoor connection:</strong> Large sliding doors
+                open to the oceanfront balcony and rooftop terrace, extending
+                the living space outside.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <!-- AMENITIES -->
+        <section>
+          <h2>Penthouse features & amenities</h2>
+          <p class="section-subtitle">
+            Every detail is tuned for extended stays—whether it’s a long weekend
+            or a full summer by the ocean.
+          </p>
+
+          <div class="amenities-list">
+            <ul>
+              <li>
+                <span class="amenities-bullet"></span>
+                Multiple coastal‑inspired living rooms with smart TVs
+              </li>
+              <li>
+                <span class="amenities-bullet"></span>
+                Large dining table plus casual seating areas
+              </li>
+              <li>
+                <span class="amenities-bullet"></span>
+                Curved, fully equipped kitchen with stainless appliances
+              </li>
+              <li>
+                <span class="amenities-bullet"></span>
+                Coffee station, beverage cooler, and ample storage
+              </li>
+            </ul>
+            <ul>
+              <li>
+                <span class="amenities-bullet"></span>
+                Spa‑style bathrooms with walk‑in showers and grab bars
+              </li>
+              <li>
+                <span class="amenities-bullet"></span>
+                Double vanities with backlit mirrors and open shelving
+              </li>
+              <li>
+                <span class="amenities-bullet"></span>
+                Plush hotel linens, towels, and in‑room toiletries
+              </li>
+              <li>
+                <span class="amenities-bullet"></span>
+                In‑suite storage, closets, and dressing areas
+              </li>
+            </ul>
+            <ul>
+              <li>
+                <span class="amenities-bullet"></span>
+                Expansive balcony with seating overlooking the beach
+              </li>
+              <li>
+                <span class="amenities-bullet"></span>
+                Rooftop terrace with dining table and loungers
+              </li>
+              <li>
+                <span class="amenities-bullet"></span>
+                Direct access to the beach and Ocean City attractions
+              </li>
+              <li>
+                <span class="amenities-bullet"></span>
+                Full DoubleTree by Hilton services and amenities
+              </li>
+            </ul>
+          </div>
+        </section>
+      </div>
+
+      <!-- RIGHT SIDEBAR -->
+      <aside>
+        <div class="side-card">
+          <div class="side-label">Availability & inquiries</div>
+          <div class="side-value">Request dates & pricing</div>
+          <p class="side-note">
+            Share your preferred dates, group size, and any special requests to
+            receive tailored availability and rate information for the
+            penthouse.
+          </p>
+          <button class="btn-primary" style="width: 100%; justify-content: center;">
+            Contact about this penthouse
+          </button>
+          <div class="contact-chip">
+            ✉️
+            <span>Or reach out via your preferred booking channel.</span>
+          </div>
+        </div>
+
+        <div class="side-card">
+          <div class="side-label">Property details</div>
+          <div class="side-row">
+            <span>Location</span>
+            <span>Oceanfront · 3301 Atlantic Ave</span>
+          </div>
+          <div class="side-row">
+            <span>Property type</span>
+            <span>5 bedroom penthouse suite</span>
+          </div>
+          <div class="side-row">
+            <span>Hotel</span>
+            <span>DoubleTree by Hilton · Ocean City</span>
+          </div>
+          <div class="side-row">
+            <span>Views</span>
+            <span>Direct Atlantic Ocean & beach</span>
+          </div>
+        </div>
+
+        <div class="side-card">
+          <div class="side-label">Perfect for</div>
+          <p class="side-note">
+            • Multi‑generation family trips<br />
+            • Wedding parties & event weekends<br />
+            • Corporate retreats & offsites<br />
+            • Long‑stay coastal escapes
+          </p>
+        </div>
+      </aside>
+    </main>
+
+    <footer>
+      5 Bedroom Penthouse · DoubleTree by Hilton Ocean City Oceanfront ·
+      3301 Atlantic Ave, Ocean City, MD 21842
+    </footer>
+  </div>
+</body>
+</html>
