@@ -19,4 +19,4 @@ This repository contains a fully static website showcasing the 5‑bedroom ocean
 3. Save and wait 30–60 seconds.
 
 Your site will appear at:
-
+http://mb-hilton.github.io/p5
